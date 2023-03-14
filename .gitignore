@@ -1,3 +1,6 @@
 *.user*
 *.sublime*
 
+# conan
+build/
+CMakeUserPresets.json

@@ -1,5 +1,8 @@
+cmake_minimum_required(VERSION 3.15)
 project(libopvault)
-cmake_minimum_required(VERSION 2.8)
+
+message("Building with CMake version: ${CMAKE_VERSION}")
+
 include_directories(include)
 link_directories()
 add_subdirectory(src)
