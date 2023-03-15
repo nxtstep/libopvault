@@ -1,0 +1,12 @@
+[settings]
+compiler=clang
+compiler.version=8
+compiler.libcxx=libc++
+os=Android
+os.api_level=26
+build_type=Release
+
+[build_requires]
+# The official recipe for our NDK version does not handle the difference between build, host and target properly.
+# This local version fixes that. For newer NDK version we should be able to switch back to the official recipe.
+#android_ndk_installer/r20@ibmepa/stable

@@ -20,7 +20,12 @@ else()
   include_directories(${SQLITE3_INCLUDE_DIRS})
 endif()
 
-aux_source_directory(../include SRC_LIST)
+#aux_source_directory(../include SRC_LIST)
 aux_source_directory(. SRC_LIST)
+#add_library(${PROJECT_NAME} STATIC ${SRC_LIST})
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
-target_link_libraries(${PROJECT_NAME} cryptopp::cryptopp sqlite3 libuuid::libuuid)
+
+#target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+#target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include")
+
+target_link_libraries(${PROJECT_NAME} PUBLIC cryptopp::cryptopp SQLite::SQLite3 libuuid::libuuid)
